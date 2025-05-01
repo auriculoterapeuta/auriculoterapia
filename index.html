@@ -119,16 +119,17 @@
     function enviarWhatsapp() {
       const local = document.getElementById("local").value;
       const queixas = document.getElementById("queixas").value;
-      window.location.href = "obrigado.html";
-      setTimeout(() => {
-        const msg = "Quero agendar uma sessão de auriculoterapia.%0A" +
-                    "Moro em: " + local + "%0A" +
-                    "Minhas queixas principais são: " + queixas;
-        const numero = "5515997563615";
-        const link = "https://wa.me/" + numero + "?text=" + msg;
-        window.open(link, "_blank");
-      }, 500);
-    }
+      function enviarWhatsapp() {
+  const local = document.getElementById("local").value;
+  const queixas = document.getElementById("queixas").value;
+  const msg = "Quero agendar uma sessão de auriculoterapia.%0A" +
+              "Moro em: " + local + "%0A" +
+              "Minhas queixas principais são: " + queixas;
+  const numero = "5515997563615";
+  const link = "https://wa.me/" + numero + "?text=" + msg;
+  window.open(link, "_blank");
+  fecharModal();
+}
   </script>
 
   <!-- Qin flutuando pela tela -->
